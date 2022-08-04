@@ -1,0 +1,122 @@
+:root {
+  --dark-navy: #020c1b;
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --navy-shadow: rgba(2, 12, 27, 0.7);
+  --dark-slate: #495670;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --green-tint: rgba(100, 255, 218, 0.1);
+  --light-green: #bee491;
+  --blue: #57cbff;
+  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: var(--navy);
+}
+
+/*----------------------------------------HEADER / NAVIGATION -----------------------*/
+.header {
+  justify-content: space-between;
+  display: flex;
+}
+.header img {
+  width: 120px;
+  height: 120px;
+  margin: 0;
+}
+.nav-menu ul {
+  text-decoration: none;
+  color: rgb(160, 230, 244);
+  display: flex;
+  margin: 20px 30px;
+}
+.nav-menu ul li {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 10px;
+  margin: 5px 15px;
+  list-style: none;
+  font-family: var(--font-mono);
+}
+.nav-menu a {
+  color: rgb(160, 230, 244);
+  text-decoration: none;
+}
+.nav-menu a:hover {
+  color: var(--light-green);
+}
+
+/*-----------------------------------MAIN TEXT -------------------------------------*/
+section {
+  padding: 100px;
+}
+
+.main-text p {
+  color: var(--light-green);
+  font-size: 20px;
+  font-family: var(--font-sans);
+}
+.main-text h1 {
+  color: var(--lightest-slate);
+  font-size: 70px;
+  font-family: var(--font-sans);
+}
+.main-text h2 {
+  color: var(--slate);
+  font-size: 50px;
+  font-family: var(--font-sans);
+}
+section .sub-text {
+    font-size: 20px;
+    font-family: var(--font-sans);
+    color: var(--slate);
+  }
+.portfolio-text p{
+    color: var(--white);
+    margin-top: 80px;
+    font-family: var(--font-mono);
+    width: max-content;
+    border: 1px solid var(--lightest-slate);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.portfolio-text a{
+   text-decoration: none;
+   cursor: pointer;
+}
+.portfolio-text a p:hover{
+    color: var(--light-green);
+ }
+
+@media (max-width: 900px) {
+  .main-text p {
+    font-size: 20px;
+  }
+  .main-text h1 {
+    font-size: 38px;
+  }
+  .main-text h2 {
+    font-size: 30px;
+  }
+  section {
+    padding: 50px;
+}
+section .sub-text {
+    font-size: 20px;
+    font-family: var(--font-sans);
+    color: var(--slate);
+  }
+
+}
+/*------------------------------------ SOCIALS------------------------------*/
