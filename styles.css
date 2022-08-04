@@ -12,6 +12,7 @@
   --green: #64ffda;
   --green-tint: rgba(100, 255, 218, 0.1);
   --light-green: #bee491;
+  --black: black;
   --blue: #57cbff;
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
@@ -68,6 +69,7 @@
     width: 100%;
   }
 
+  /* Need to add the extra works to hamburger menu*/
   @media (min-width:600px){
     #burger {
         display: none;
@@ -99,6 +101,7 @@ section .sub-text {
     font-size: 20px;
     font-family: var(--font-sans);
     color: var(--slate);
+    margin-top: ;
   }
 .portfolio-text p{
     color: var(--white);
