@@ -53,8 +53,27 @@
   text-decoration: none;
 }
 .nav-menu a:hover {
-  color: var(--light-green);
+  color: var(--white);
 }
+.nav-menu ul li::after { /*this selector adds the green line under the links ready for transition*/
+    content: '';/*this makes the line 0 wide until we add transition*/
+    width: 0%;
+    height: 1.5px;
+    background: var(--light-green);
+    display: block;
+    margin: auto;
+    transition: 0.7s;
+  }
+  .nav-menu ul li:hover::after { /*makes the green line transition below links*/
+    width: 100%;
+  }
+
+  @media (min-width:600px){
+    #burger {
+        display: none;
+    }
+  }
+  
 
 /*-----------------------------------MAIN TEXT -------------------------------------*/
 section {
@@ -120,3 +139,19 @@ section .sub-text {
 
 }
 /*------------------------------------ SOCIALS------------------------------*/
+.socials {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 90px;
+    margin-top: 10px;
+}
+.socials i {
+    font-size: 25px;
+    color:var(--light-green);
+    padding: 10px;
+}
+@media (max-width:900px){
+    .socials{
+        padding: 45px;
+    }
+}
