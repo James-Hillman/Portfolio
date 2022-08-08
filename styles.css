@@ -158,3 +158,44 @@ section .sub-text {
         padding: 45px;
     }
 }
+/*---------------------------------CONTACT FORM-------------------------------*/
+.contact-form{
+  display: flex;
+  justify-content: center;
+}
+.contact-form h2 {
+  color: #495670;
+  font-family: var(--font-sans);
+  font-size: 35px;
+
+}
+.form input {
+  padding: 10px;
+  margin-top: 40px;
+  width: 500px;
+  color: var(--light-slate);
+  font-size: 15px;
+}
+::placeholder {
+  color: var(--light-green);
+  font-size: 15px;
+}
+button {
+  padding: 10px;
+  margin-top: 25px;
+  cursor: pointer;
+  color: var(--light-slate);
+  border-color: var(--light-green);
+  border-radius: 5px;
+}
+button:hover{
+  background:var(--dark-slate) ;
+}
+textarea {
+  margin-top: 40px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  padding: 10px;
+  color: var(--light-slate);
+}
+
