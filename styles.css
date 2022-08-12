@@ -73,11 +73,26 @@
   }
 
   /* Need to add the extra works to hamburger menu*/
-  @media (min-width:600px){
-    #burger {
-        display: none;
+  @media (max-width:900px){
+    .nav-menu {
+      display: none;
     }
+    
   }
+  @media (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+  .hamburger {
+    padding: 30px;
+  }
+  .hamburger a {
+    color: var(--light-green);
+    font-size: 30px;
+  }
+
   
 section {
   padding: 100px var(--indent) ;
@@ -158,7 +173,7 @@ section p {
 section .sub-text {
     font-size: 20px;
     font-family: var(--font-sans);
-    color: var(--slate);
+    color: var(--light-green);
   }
   .see-work {
     margin-left: 50px;
