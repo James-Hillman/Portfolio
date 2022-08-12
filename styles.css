@@ -17,6 +17,7 @@
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  --indent: 100px;
 }
 * {
   box-sizing: border-box;
@@ -51,7 +52,7 @@
   font-family: var(--font-sans);
 }
 .nav-menu a {
-  color: rgb(160, 230, 244);
+  color: var(--light-green);
   text-decoration: none;
 }
 .nav-menu a:hover {
@@ -78,47 +79,60 @@
   }
   
 
-/*-----------------------------------MAIN TEXT -------------------------------------*/
+/*-----------------------------------MAIN HEADER TEXT -------------------------------------*/
 section {
   padding: 100px;
+}
+
+/*KEYFRAMES FOR SLIDING HEADER TEXT INTO SCREEN*/
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-290%);
+  }
 }
 
 .main-text p {
   color: var(--light-green);
   font-size: 20px;
   font-family: var(--font-sans);
+  animation: slideIn 1.2s ease
 }
 .main-text h1 {
   color: var(--lightest-slate);
   font-size: 70px;
   font-family: var(--font-sans);
+  animation: slideIn 2.2s ease
+  
 }
 .main-text h2 {
   color: var(--slate);
   font-size: 50px;
   font-family: var(--font-sans);
+  animation: slideIn 2.6s ease
 }
 section .sub-text {
     font-size: 20px;
     font-family: var(--font-sans);
     color: var(--slate);
-    margin-top: ;
+    animation: slideIn 3.2s ease
   }
-.portfolio-text p{
-    color: var(--white);
-    margin-top: 80px;
-    font-family: var(--font-mono);
-    width: max-content;
-    border: 1px solid var(--lightest-slate);
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
+ 
+.see-work {
+  width: max-content;
+  border: 1px solid var(--light-green);
+  border-radius: 3px;
+  padding: 10px;
+  margin-left: var(--indent);
+  animation: slideIn 3.5s ease
 }
-.portfolio-text a{
+.see-work a{
    text-decoration: none;
-   cursor: pointer;
+   color: var(--light-slate);
+   font-family: var(--font-sans);
+   font-size: 16px;
 }
-.portfolio-text a p:hover{
+.see-work a p:hover{
     color: var(--light-green);
  }
 
@@ -140,24 +154,14 @@ section .sub-text {
     font-family: var(--font-sans);
     color: var(--slate);
   }
-
+  .see-work {
+    margin-left: 50px;
+  }
 }
 /*------------------------------------ SOCIALS------------------------------*/
-.socials {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 90px;
-    margin-top: 10px;
-    position: fixed;
-}
-.socials i {
-    font-size: 25px;
-    color:var(--light-green);
-    padding: 10px;
-}
-@media (max-width:900px){
-    .socials{
-        padding: 45px;
-    }
-}
+
+
+
+
+
 
