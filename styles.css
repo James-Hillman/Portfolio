@@ -17,7 +17,7 @@
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-  --indent: 100px;
+  --indent: 300px;
 }
 * {
   box-sizing: border-box;
@@ -36,20 +36,21 @@
   height: 120px;
   margin: 0;
 }
-.nav-menu ul {
+.nav-menu ol {
   text-decoration: none;
   color: rgb(160, 230, 244);
   display: flex;
   margin: 20px 30px;
-  
+  animation: navSlide 2.0s ease;
 }
-.nav-menu ul li {
-  font-size: 14px;
+.nav-menu ol li {
+  font-size: 13px;
   font-weight: 700;
   padding: 5px 10px;
   margin: 5px 15px;
-  list-style: none;
+  color: var(--lightest-slate);
   font-family: var(--font-sans);
+  list-style: none;
 }
 .nav-menu a {
   color: var(--light-green);
@@ -58,7 +59,7 @@
 .nav-menu a:hover {
   color: var(--white);
 }
-.nav-menu ul li::after { /*this selector adds the green line under the links ready for transition*/
+.nav-menu ol li::after { /*this selector adds the green line under the links ready for transition*/
     content: '';/*this makes the line 0 wide until we add transition*/
     width: 0%;
     height: 1.5px;
@@ -67,7 +68,7 @@
     margin: auto;
     transition: 0.7s;
   }
-  .nav-menu ul li:hover::after { /*makes the green line transition below links*/
+  .nav-menu ol li:hover::after { /*makes the green line transition below links*/
     width: 100%;
   }
 
@@ -78,23 +79,27 @@
     }
   }
   
-
-/*-----------------------------------MAIN HEADER TEXT -------------------------------------*/
 section {
-  padding: 100px;
+  padding: 100px var(--indent) ;
 }
 
-/*KEYFRAMES FOR SLIDING HEADER TEXT INTO SCREEN*/
+/*--------------KEYFRAMES FOR SLIDING HEADER TEXT INTO SCREEN-------------*/
 
 @keyframes slideIn {
   0% {
     transform: translateX(-290%);
   }
 }
+@keyframes navSlide {
+  0% {
+    transform: translateX(+150%);
+  }
+}
+
+/*-----------------------------------TEXT SECTION -------------------------------------*/
 
 .main-text p {
   color: var(--light-green);
-  font-size: 20px;
   font-family: var(--font-sans);
   animation: slideIn 1.2s ease
 }
@@ -111,11 +116,12 @@ section {
   font-family: var(--font-sans);
   animation: slideIn 2.6s ease
 }
-section .sub-text {
-    font-size: 20px;
+section p {
     font-family: var(--font-sans);
-    color: var(--slate);
-    animation: slideIn 3.2s ease
+    color: var(--light-slate);
+    animation: slideIn 3.2s ease;
+    padding-top: 30px;
+    font-size: 25px;
   }
  
 .see-work {
@@ -124,9 +130,9 @@ section .sub-text {
   border-radius: 3px;
   padding: 10px;
   margin-left: var(--indent);
-  animation: slideIn 3.5s ease
+  animation: slideIn 3.1s ease
 }
-.see-work a{
+.see-work a {
    text-decoration: none;
    color: var(--light-slate);
    font-family: var(--font-sans);
