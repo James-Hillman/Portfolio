@@ -76,6 +76,7 @@
   @media (max-width:900px){
     .nav-menu {
       display: none;
+      
     }
     
   }
@@ -83,14 +84,16 @@
   .hamburger {
     display: none;
   }
+
 }
 
   .hamburger {
     padding: 30px;
   }
-  .hamburger a {
+  .hamburger i {
     color: var(--light-green);
     font-size: 30px;
+    cursor: pointer;
   }
 
   
@@ -177,6 +180,9 @@ section .sub-text {
   }
   .see-work {
     margin-left: 50px;
+  }
+  .top {
+    margin-top: 150px;
   }
 }
 /*------------------------------------ SOCIALS------------------------------*/
